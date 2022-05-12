@@ -1,35 +1,64 @@
 {
-  "name": "2021-2022_p12_graphicobject",
+  "name": "p12_graphic_object",
   "version": "1.0.0",
-  "description": "PAI Lab assignment #12. HML Canvas API. Event driven Graphic Object",
-  "main": "index.js",
+  "description": "PAI Lab assignment #12",
   "devDependencies": {
     "@babel/core": "^7.17.4",
     "@exercism/eslint-config-javascript": "^0.6.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^16.11.25",
     "babel-jest": "^27.5.1",
+    "chai": "latest",
+    "commander": "^7.1.0",
     "core-js": "^3.21.1",
-    "eslint": "^8.9.0",
-    "jest": "^27.5.1"
+    "escodegen": "^1.14.3",
+    "eslint": "^8.11.0",
+    "eslint-config-google": "^0.14.0",
+    "espree": "^9.3.1",
+    "express": "^4.17.1",
+    "jest": "^27.5.1",
+    "jison": "latest",
+    "jsdoc": "^3.6.10",
+    "jsdoc-to-markdown": "^7.1.1",
+    "nyc": "latest"
   },
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "badtest": "jest --verbose",
     "watch": "jest --watchAll --verbose",
-    "coverage": "jest --coverage --verbose"
+    "coverage": "jest --coverage --verbose",
+    "start": "node web-server/app.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "collectCoverageFrom": [
+      "./code/*/test/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90
+      }
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-PAI-P12-GraphicObject.git"
+    "url": "git+https://github.com/alu0101444741/PAI_P12_GraphicObject.git"
   },
-  "keywords": [Javascript, HTML, canvas, events, ball],
-  "author": "F. de Sande <fsande@ull.es>",
-  "license": "MIT",
+  "keywords": [
+    "PAI",
+    "Javascript",
+    "Lab",
+    "Canvas",
+    "Moving",
+    "Ball"
+  ],
+  "author": "Roberto Carrazana Pernía",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-PAI-P12-GraphicObject/issues"
+    "url": "https://github.com/alu0101444741/PAI_P12_GraphicObject/issues"
   },
-  "homepage": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-PAI-P12-GraphicObject#readme"
+  "homepage": "https://github.com/alu0101444741/PAI_P12_GraphicObject#readme",
+  "type": "module"
 }
